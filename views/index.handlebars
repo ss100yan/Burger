@@ -1,12 +1,24 @@
+<div class="container  s6 card-panel #f3e5f5 purple lighten-5" >
+<h6 ><font color="purple" >EAT DA BURGER!!!  </h6>
+ </div>
+{{!-- input form for burger name --}}
 
- <div class="row">
+ <div class="container card-panel #f3e5f5 purple lighten-5" >
+   <form>
+    <div class="file-field input-field">
+      <input value="" id="burger_name2" type="text" class="validate">
+      <label class="active" for="burger_name2">Burger Name</label>
+      <input type ="submit" class ="btn waves-effect waves-light" value = "Submit"/>
+    </div>
+</form>
+       
+        {{!-- <div class="row">
     <div class="input-field col s6">
       <input value="" id="burger_name2" type="text" class="validate">
       <label class="active" for="burger_name2">Burger Name</label>
     </div>
-  </div>
-        
-
+  </div> --}}
+      </div>
 
 <div class="row">
   {{! Burgers to eat}}
@@ -30,7 +42,7 @@
     </ul>
   </div>
 
-  {{! Devoured Burgers}}
+  {{!-- Devoured Burgers --}}
   <div class="col s6 center-align">
     <ul>
       {{#each brgr}}
