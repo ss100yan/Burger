@@ -4,24 +4,19 @@
 {{!-- input form for burger name --}}
 
  <div class="container card-panel #f3e5f5 purple lighten-5" >
-   <form>
+   <form action="/create" method="POST" class="button-size">
     <div class="file-field input-field">
-      <input value="" id="burger_name2" type="text" class="validate">
-      <label class="active" for="burger_name2">Burger Name</label>
+      <input value="" id="burger_name" type="text" class="validate">
+      <label class="active" for="burger_name">Burger Name</label>
       <input type ="submit" class ="btn waves-effect waves-light" value = "Submit"/>
     </div>
 </form>
-       
-        {{!-- <div class="row">
-    <div class="input-field col s6">
-      <input value="" id="burger_name2" type="text" class="validate">
-      <label class="active" for="burger_name2">Burger Name</label>
-    </div>
-  </div> --}}
-      </div>
-
+ </div>
 <div class="row">
+
+
   {{! Burgers to eat}}
+  
   <div class="col s6 center-align">
     <ul>
       {{#each brgr}}

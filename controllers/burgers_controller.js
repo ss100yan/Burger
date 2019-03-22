@@ -12,7 +12,7 @@ router.get('/',function(req,res){
    //create an object that holds information from both the burger and menu table
     var info = {
       brgr: [],
-      // itm: []
+      itm: []
     };
 
 // grab data from burger table
@@ -28,9 +28,11 @@ router.get('/',function(req,res){
 });
 
   router.post('/create', function(req, res){
-    burger.insertOne([req.body.burgerInput], function(){
-      res.redirect('/');
-    });
+    // burger.insertOne([req.body.burgerInput], 
+    //   function(){
+      
+    // });
+    res.redirect('/');
   });
   
   router.put('/update/:id', function(req, res){
