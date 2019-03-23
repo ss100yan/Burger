@@ -1,21 +1,27 @@
-{{!-- <div class="container  s6 card-panel #f3e5f5 purple lighten-5" >
-<h6 ><font color="purple" >EAT DA BURGER!!!  </h6>
- </div> --}}
-{{!-- input form for burger name --}}
 
+{{!-- input form for burger name --}}
+   
  <div class="container card-panel #f3e5f5 purple lighten-5" >
-   <form action="/create" method="POST" class="button-size">
-    <div class="file-field input-field">
-      <input value="" id="burger_name" type="text" class="validate">
-      <label class="active" for="burger_name">Burger Name</label>
-      <input type ="submit" class ="btn waves-effect waves-light" value = "Submit"/>
-    </div>
-</form>
+
+   {{! Grabing the user burger input and posting to /create Route}}
+
+     <form action="/create" method="POST" class="button-size">
+
+        <div class="file-field input-field">
+
+             <input value="" id="burgerInput" type="text" class="validate">
+            <label class="active" for="burgerInput">Burger Input</label>
+            <input type ="submit" class ="btn waves-effect waves-light" value = "Submit"/>
+
+       </div>
+
+     </form>
  </div>
+
 <div class="row">
 
 
-  {{! Burgers to eat}}
+  {{! Listing all the burgers to be devour it from the database}}
 
   <div class="col s3 center-align">
     <ul>
@@ -26,15 +32,15 @@
               {{this.id}}. {{this.burger_name}}
 
               <form action="update/{{this.id}}?_method=PUT" method="POST">
-                
+           
                 <input type ="submit" class ="btn waves-effect waves-light" value = "devour it"/>
               </form>
   
             </p>
           </div>
-       
+     
       {{/each}}
     </ul>
   </div>
 
-  
+ 

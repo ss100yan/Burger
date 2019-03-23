@@ -9,37 +9,35 @@
 router.get('/',function(req,res){
 
 
-   //create an object that holds information from both the burger and menu table
+   //create an object that holds information.
+
     var info = {
       brgr: [],
       itm: []
     };
 
-// grab data from burger table
+// grab data from burger table and isret's it to the object ifo.
+
     burger.selectAll(function(data){
       for(var i=0;i<data.length; i++){
         info.brgr.push(data[i]);
       }
    });    
    
-  
-//render index.handlebars
+  //render info to index.handlebars
     res.render('index',info)
 });
+//Routing to '/create' and calling thhe insertOne burger model and passing the new burger Info.
+router.post('/create', function(req, res){
+  burger.insertOne([req.body.burgerInput], function(){
 
-  router.post('/create', function(req, res){
-    burger.insertOne([], 
-      function(){
-      
-    });
+ // going back to the main route   
+ 
     res.redirect('/');
   });
+});
   
-  router.put('/update/:id', function(req, res){
-    burger.updateOne([], function(){
-      res.redirect('/');
-    });
-  });
+
   
 
 

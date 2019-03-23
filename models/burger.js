@@ -11,8 +11,10 @@ var burger = {
       });
     },
  
-    insertOne: function(){
-      
+    insertOne: function(val, cb){
+      orm.insertOne('burgers', 'burger_name', val, function(res){
+        cb(res);
+      });
     },
     updateOne: function(){
      
