@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
     app.engine('handlebars', exphbs({defaultLayout: 'main'}));
       app.set('view engine', 'handlebars');
 
-//imporing the routing(routes) from burgers_controller.js
+//importing the routing(routes) from burgers_controller.js
    var routes = require('./controllers/burgers_controller.js');
 
 //seting up the main ('/') route

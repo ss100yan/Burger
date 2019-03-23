@@ -20,19 +20,19 @@
   <div class="col s3 center-align">
     <ul>
       {{#each brgr}}
-        {{#unless this.devoured}}
+       
           <div class="card-panel #f3e5f5 purple lighten-5">
             <p>
               {{this.id}}. {{this.burger_name}}
 
               <form action="update/{{this.id}}?_method=PUT" method="POST">
-                <input type="hidden" name="devoured" value="1">
+                
                 <input type ="submit" class ="btn waves-effect waves-light" value = "devour it"/>
               </form>
   
             </p>
           </div>
-        {{/unless}}
+       
       {{/each}}
     </ul>
   </div>
