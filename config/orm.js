@@ -4,24 +4,14 @@ var connection = require("./connection.js");
 
 // * `selectAll()`
 // var orm = {
-// selectAll: function(callback){
 
-//     connection.query('SELECT * FROM burgers', function (error, results, fields) {
-//     if (error)
-//         throw error;
-//         callback(results);
-//     results.forEach(result => {
-//         console.log(result);
-//     });
-// });
-// } ,
 var orm ={
     selectAll: function(table, callback){
       var queryString = 'SELECT * FROM ' + table;
   
-      connection.query(queryString, function(err, data){
-        if(err) throw err;
-        callback(data);
+      connection.query(queryString, function(error, results){
+        if(error) throw error;
+        callback(results);
       });
     },
   

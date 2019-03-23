@@ -28,15 +28,15 @@ router.get('/',function(req,res){
 });
 
   router.post('/create', function(req, res){
-    // burger.insertOne([req.body.burgerInput], 
-    //   function(){
+    burger.insertOne([], 
+      function(){
       
-    // });
+    });
     res.redirect('/');
   });
   
   router.put('/update/:id', function(req, res){
-    burger.updateOne([req.body.devoured], [req.params.id], function(){
+    burger.updateOne([], function(){
       res.redirect('/');
     });
   });
