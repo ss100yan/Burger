@@ -6,6 +6,7 @@ var connection = require("./connection.js");
 // var orm = {
 
 var orm ={
+// *  ORM function taking all the  burger names from SQL database.
 selectAll: function(table, callback){
       var queryString = 'SELECT * FROM ' + table;
   
@@ -16,7 +17,7 @@ selectAll: function(table, callback){
     },
   
 
-// * `insertOne()`
+// *  ORM function insering to insert a new burger name to SQL database.
 insertOne: function(table, column, burgerInput, callback){
     var queryString = 'INSERT INTO ' + table + '(' + column + ') VALUES (?)';
 
@@ -26,11 +27,8 @@ insertOne: function(table, column, burgerInput, callback){
     });
   },
 
-// * `updateOne()`
-updateOne: function(){
 
- 
-} 
+updateOne: function(){} 
 
 // connection.end();
 };
