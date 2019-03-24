@@ -7,6 +7,8 @@
 ### Heroku deployment:
  https://stark-citadel-27271.herokuapp.com/
 
+ Screenshot of the functionality in the GIF folder.
+
 ##### Tehnologies:
 
 * Node.js
