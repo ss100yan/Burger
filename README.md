@@ -3,8 +3,9 @@
 ### About:
  Burger logger with MySQL, Node, Express, Handlebars and a ORM.
 
- 
- Screenshot is provided in the GIF folder
+
+### Heroku deployment:
+ https://stark-citadel-27271.herokuapp.com/
 
 ##### Tehnologies:
 
