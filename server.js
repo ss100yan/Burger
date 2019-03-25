@@ -11,6 +11,7 @@ var app = express();
 //  static content from /public.
 app.use(express.static(process.cwd() + '/public'));
 
+//seting up the express middleware body-parser for HTTP POST request/ req.body.
 app.use(bodyParser.urlencoded({
   extended: false
 }));
