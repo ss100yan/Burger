@@ -28,7 +28,14 @@ insertOne: function(table, column, burgerInput, callback){
   },
 
 
-updateOne: function(){} 
+  updateOne: function(table, col, colVal, condition, conditionVal, callback){
+    var queryString = 'UPDATE ' + table + ' SET ' + col + '=?' + 'WHERE ' + condition + '=?';
+
+    connection.query(queryString, [colVal, conditionVal], function(err, data){
+      if(err) throw err;
+      callback(data);
+    });
+  },
 
 // connection.end();
 };

@@ -15,7 +15,7 @@ router.get('/',function(req,res){
                    itm: []
                   };
 
-        // grab data from burger table and isret's it to the object ifo.
+        // grab data from burger table and insret's it to the object ifo.
 
          burger.selectAll(function(data){
           for(var i=0;i<data.length; i++){
@@ -26,15 +26,21 @@ router.get('/',function(req,res){
     res.render('index',info)
 });
 
-//Routing to '/create' , calling the insertOne burger model and passing the new burger Info.
+//Routing to '/create', calling the insertOne burger model and passing the new burger Info.
 router.post('/create', function(req, res){
+  //taking the the burgerInput http post from req.body to burger.insertOne model.
   burger.insertOne([req.body.burgerInput], function(){
 
       // going back to the main route   
         res.redirect('/');
   });
 });
-  
+//Routing to '/update',calling the updateOne burger model and updating the devourit to true.  
+router.put('/update/:id', function(req, res){
+  burger.updateOne([req.body.devoured], [req.params.id], function(){
+    res.redirect('/');
+  });
+});
 
   
 
